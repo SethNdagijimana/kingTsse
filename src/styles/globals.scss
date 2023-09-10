@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.boxShadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 20px;
+  @apply lg:text-[36px] text-[16px] lg:leading-[1.25rem] leading-[0.625rem];
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.landing-page {
+  background-image: url("/landing-bg.svg");
+  background-position: center;
+  background-size: contain;
+  background-color: white;
+}
+
+.animated-card {
+  top: 0;
+  z-index: 1;
+  transform: scale(0.9);
+  transition: all 0.7s ease-in-out;
+
+  &.animated-card-active {
+    top: 32px;
+    z-index: 2;
+    transform: scale(1);
+    // animation: appear 0.7s;
+  }
+}
+
+// @keyframes appear {
+//   0% {
+//     top: 0;
+//     opacity: 0.5;
+//   }
+
+//   100% {
+//     top: 32px;
+//     opacity: 1;
+//   }
+// }
+
+.react-colorful__pointer {
+  width: 18px !important;
+  height: 18px !important;
+  cursor: pointer;
+}
+
+.react-colorful__hue {
+  height: 18px !important;
+}
+
+.product-dialog {
+  background: linear-gradient(180deg, #e4dbff 0%, #fff 90.71%);
+}
+
+.publish-dialog-header {
+  background: linear-gradient(180deg, #e6ddff 0%, #fff 53.71%);
+}
+
+.delete-dialog {
+  background: linear-gradient(180deg, #ffd9d9 0%, #fff 53.71%);
+}
+
+.phone-input-ctn {
+  input {
+    @apply w-full text-sm m-0 p-0 focus:ring-0 outline-none focus:outline-none;
+  }
+}
+
+.dashboard-content {
+  @apply max-w-full md:max-w-[600px];
+  width: calc(100vw - 40rem);
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 14px;
+  }
+}
+
+.product-image-slider {
+  width: 100% !important;
+  height: 190px !important;
+
+  .carousel-slider {
+    width: 100% !important;
+    height: 190px !important;
+  }
+
+  .slide {
+    width: 100% !important;
+    height: 190px !important;
+  }
+
+  .control-arrow,
+  .carousel-status {
+    display: none !important;
+  }
+
+  .control-dots {
+    // display: inline-flex !important;
+    background: #414141;
+    width: auto !important;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px !important;
+
+    .dot {
+      box-shadow: none !important;
+      margin: 0px !important;
+      background: #e6ddff !important;
+      opacity: 1 !important;
+
+      &.selected {
+        background: #9a77ff !important;
+      }
+    }
+  }
+}
